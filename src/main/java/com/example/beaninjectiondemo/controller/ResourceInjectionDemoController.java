@@ -18,32 +18,32 @@ import org.springframework.web.bind.annotation.RestController;
 public class ResourceInjectionDemoController {
 
     @Resource
-    private Hello1ServiceImpl hello1Service;
+    private MessageService hello1ServiceImpl;
 
     @Resource
-    private Hello2ServiceImpl hello2Service;
+    private MessageService hello2ServiceImpl;
 
     @Resource
-    private Hello3ServiceImpl hello3Service;
+    private MessageService hello3ServiceImpl;
 
     @Resource
-    private Hello4ServiceImpl hello4Service;
+    private MessageService hello4ServiceImpl;
 
     @Resource
-    private Hello5ServiceImpl hello5Service;
+    private MessageService hello5ServiceImpl;
 
     @Resource
-    private Hello6ServiceImpl hello6Service;
+    private MessageService hello6ServiceImpl;
 
 
     @GetMapping("/hello")
     public String getGreetingMessage() {
-        hello1Service.getMessage();
-        hello2Service.getMessage();
-        hello3Service.getMessage();
-        hello4Service.getMessage();
-        hello5Service.getMessage();
-        hello6Service.getMessage();
+        hello1ServiceImpl.getMessage();
+        hello2ServiceImpl.getMessage();
+        hello3ServiceImpl.getMessage();
+        hello4ServiceImpl.getMessage();
+        hello5ServiceImpl.getMessage();
+        hello6ServiceImpl.getMessage();
         return "yes!";
     }
 
